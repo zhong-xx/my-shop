@@ -1,24 +1,34 @@
-import MyFooter from "./components/MyFooter/MyFooter";
-import MyHeader from "./components/MyHeader/MyHeader";
+import MyFooter from "./components/MyFooter.js";
+import MyHeader from "./components/MyHeader";
 import { Layout } from 'antd';
+import Home from "./pages/Home.js";
+import ProductDetail from "./pages/ProductDetail.js";
+import Card from "./pages/Cart.js";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <Layout style={{height: '100%' }}>
-      <Header>
-        <MyHeader />
-      </Header>
+    <Router>
+      <Layout style={{height: '100%' }}>
+        <Header style={{ textAlign: 'center' }}>
+          <MyHeader />
+        </Header>
 
-      <Content style={{ background: 'white'}}>
-        <h2>hello5451</h2>
-      </Content>
+        <Content style={{background: 'white', overflow: 'auto'}}>
+          <div style={{width: '70%', margin: '0 auto'}}>
+            <Route path='/' component={Home} exact />
+            <Route path='/products/:id' component={ProductDetail} />
+            <Route path='/cart/:id?' component={Card} />
+          </div>
+        </Content>
 
-      <Footer style={{ textAlign: 'center', background: 'white' }}>
-        <MyFooter />
-      </Footer>
-    </Layout>
+        <Footer style={{ textAlign: 'center', background: 'white' }}>
+          <MyFooter />
+        </Footer>
+      </Layout>
+    </Router>
   );
 }
 
