@@ -18,9 +18,9 @@ router
   .route('/profile')
   .get(protect, getUserProfile)
   .put(protect, updateUserProfile)
-router
-  .route('/:id')
-  .delete(protect, admin, deleteUser)
-  .get(protect, admin, getUserById)
-  .put(protect, admin, updateUser)
+// router
+//   .route('/:id')
+//   .delete(protect, admin, deleteUser)
+//   .get(protect, admin, getUserById)
+//   .put(protect, admin, updateUser)
 export default router

@@ -1,22 +1,37 @@
-// combineReducers合并Reducer，形成一个大的Reducer
-// applyMiddleware：使我们可以使用中间件
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { productListReducer, productDetailReducer } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
+import { userLoginReducer, userRegisterReducer, userDetailReducer } from './reducers/userReducers'
 
 const reducer = combineReducers({
     productList: productListReducer,
     productDetail: productDetailReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    userLogin: userLoginReducer,
+    userRegister: userRegisterReducer,
+    userDetail: userDetailReducer
 })
 
-const cartItemsFromStore = localStorage.getItem('cartItems')? JSON.parse(localStorage.getItem('cartItems')): []
+// 获取本地存储的购物车信息
+const cartItemsFromStorage = localStorage.getItem('cartItems')? JSON.parse(localStorage.getItem('cartItems')): []
+// 获取本地存储的登录用户信息
+const userInfoFromStorage = localStorage.getItem('userInfo')? JSON.parse(localStorage.getItem('userInfo')): null
+// 获取本地存储的地址信息
+const addressStorage = localStorage.getItem('address')? JSON.parse(localStorage.getItem('address')): {}
+// 获取本地存储的支付方式信息
+const paymentMethodStorage = localStorage.getItem('paymentMethod')? JSON.parse(localStorage.getItem('paymentMethod')): "微信"
+
 
 const initialState = {
     cart: {
-        cartItems: cartItemsFromStore
+        cartItems: cartItemsFromStorage,
+        address: addressStorage,
+        paymentMethod: paymentMethodStorage
+    },
+    userLogin: {
+        userInfo: userInfoFromStorage
     }
 }
 
