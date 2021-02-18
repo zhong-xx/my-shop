@@ -2,11 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Col, Row, Image, Descriptions, Select  } from 'antd'
-import Rating from '../components/Rating.js'
+import Rating from '../../components/Rating.js'
 import { useDispatch, useSelector } from 'react-redux'
-import { productDetail } from '../actions/productActions'
-import Loader from '../components/Loader'
-import Message from '../components/Message'
+import { productDetail } from '../../actions/productActions'
+import Loader from '../../components/Loader'
+import Message from '../../components/Message'
 const { Option } = Select;
 
 const ProductDetail = ({match, history}) => {

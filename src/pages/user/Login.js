@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { Form, Input, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../actions/userActions'
-import Loader from '../components/Loader'
-import Message from '../components/Message'
+import { login } from '../../actions/userActions'
+import Loader from '../../components/Loader'
+import Message from '../../components/Message'
 
 const Login = ({ location, history }) => {
 

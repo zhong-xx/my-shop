@@ -1,14 +1,15 @@
 import MyFooter from "./components/MyFooter.js";
 import MyHeader from "./components/MyHeader";
 import { Layout } from 'antd';
-import Home from "./pages/Home.js";
-import ProductDetail from "./pages/ProductDetail.js";
+import Home from "./pages/product/Home.js";
+import ProductDetail from "./pages/product/ProductDetail.js";
 import Card from "./pages/Cart.js";
-import Login from "./pages/Login.js";
+import Login from "./pages/user/Login.js";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Register from './pages/Register'
-import Profile from './pages/Profile'
-import PaySteps from "./pages/PaySteps.js";
+import Register from './pages/user/Register'
+import Profile from './pages/user/Profile'
+import PaySteps from "./pages/order/PaySteps.js";
+import Order from "./pages/order/Order.js";
 
 const { Header, Footer, Content } = Layout;
 
@@ -29,6 +30,7 @@ function App() {
             <Route path='/products/:id' component={ProductDetail} />
             <Route path='/cart/:id?' component={Card} />
             <Route path='/paySteps' component={PaySteps} />
+            <Route path='/order/:id' component={Order} />
           </div>
         </Content>
 

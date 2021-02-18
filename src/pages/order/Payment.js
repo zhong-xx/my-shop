@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Radio } from "antd";
-import { savePaymentMethod } from "../actions/cartActions";
+import { savePaymentMethod } from "../../actions/cartActions";
 import { useSelector, useDispatch } from "react-redux";
 
 const Payment = ({ prev, next }) => {

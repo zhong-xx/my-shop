@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { productListReducer, productDetailReducer } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
+import { orderReducer } from './reducers/orderReducers'
 import { userLoginReducer, userRegisterReducer, userDetailReducer } from './reducers/userReducers'
 
 const reducer = combineReducers({
@@ -11,7 +12,8 @@ const reducer = combineReducers({
     cart: cartReducer,
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
-    userDetail: userDetailReducer
+    userDetail: userDetailReducer,
+    order: orderReducer
 })
 
 // 获取本地存储的购物车信息

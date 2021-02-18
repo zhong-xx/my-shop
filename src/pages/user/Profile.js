@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Row, Form, Input, Button, message } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserDetail, updateUserProfile } from '../actions/userActions'
+import { getUserDetail, updateUserProfile } from '../../actions/userActions'
 
 const Profile = () => {
 

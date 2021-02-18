@@ -1,10 +1,10 @@
 import React from 'react'
 import { Form, Input, Button, message } from 'antd';
-import Loader from '../components/Loader'
-import Message from '../components/Message'
+import Loader from '../../components/Loader'
+import Message from '../../components/Message'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { register } from '../actions/userActions'
+import { register } from '../../actions/userActions'
 
 const Register = () => {
     

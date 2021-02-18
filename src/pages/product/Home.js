@@ -1,11 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'antd';
-import Product from '../components/Product.js';
+import Product from '../../components/Product.js';
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { listProducts } from '../actions/productActions'
-import Loader from '../components/Loader'
-import Message from '../components/Message.js';
+import { listProducts } from '../../actions/productActions'
+import Loader from '../../components/Loader'
+import Message from '../../components/Message.js';
 
 const Home = () => {
 

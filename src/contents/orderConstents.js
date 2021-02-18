@@ -1,0 +1,2 @@
+export const POST_ORDER = 'POST_ORDER'
+export const GET_ORDER_DETAILS = 'GET_ORDER_DETAILS'

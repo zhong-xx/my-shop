@@ -1,13 +1,12 @@
 import React from "react";
 import Shipping from "./Shipping";
-import { Steps, Button, message } from "antd";
+import { Steps } from "antd";
 import Payment from "./Payment";
 import PlaceOrder from "./PlaceOrder";
 const { Step } = Steps;
 
 const PaySteps = () => {
   
-
   const [current, setCurrent] = React.useState(0);
 
   const next = () => {
